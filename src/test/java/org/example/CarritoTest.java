@@ -1,5 +1,4 @@
-
-import org.example.Producto;
+package org.example;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,9 +21,9 @@ public class CarritoTest {
     @Test
     void totalConDosProductosEsLaSumaDeSusPrecios() {
         Carrito carrito = new Carrito();
-        carrito.agregar(new Producto("morral", 1.500, 10));
-        carrito.agregar(new Producto("cartuchera", 2.000, 5));
-        assertEquals(3.500, carrito.calcularTotal());
+        carrito.agregar(new Producto("morral", 1.50, 10));
+        carrito.agregar(new Producto("cartuchera", 2.00, 5));
+        assertEquals(3.50, carrito.calcularTotal());
     }
 
     @Test
@@ -35,18 +34,18 @@ public class CarritoTest {
     }
 
     @Test
-    void testTotalDeCarritoVacioEsCero() {
+    void totalDeCarritoVacioEsCero() {
         Carrito carrito = new Carrito();
         assertEquals(0.0, carrito.calcularTotal());
     }
 
     @Test
-    // acumula con más de un producto
+        // acumula con más de un producto
     void cantidadDeProductosConVariosProductos() {
         Carrito carrito = new Carrito();
-        carrito.agregar(new Producto("Manzana", 1.50, 10));
-        carrito.agregar(new Producto("Pera", 2.00, 5));
-        carrito.agregar(new Producto("Uva", 3.00, 8));
+        carrito.agregar(new Producto("Morral", 1.50, 10));
+        carrito.agregar(new Producto("cuaderno", 2.00, 5));
+        carrito.agregar(new Producto("lapez", 3.00, 8));
         assertEquals(3, carrito.cantidadDeProductos());
     }
 }
