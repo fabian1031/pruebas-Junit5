@@ -45,7 +45,7 @@ public class CarritoTest {
         Carrito carrito = new Carrito();
         carrito.agregar(new Producto("Morral", 1.50, 10));
         carrito.agregar(new Producto("cuaderno", 2.00, 5));
-        carrito.agregar(new Producto("lapez", 3.00, 8));
+        carrito.agregar(new Producto("cartuchera", 3.00, 8));
         assertEquals(3, carrito.cantidadDeProductos());
     }
 }
